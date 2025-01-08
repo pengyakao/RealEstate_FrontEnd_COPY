@@ -1,0 +1,745 @@
+/* Import Google Fonts and Animate.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap');
+
+html, .body {
+    margin: 0;
+    overflow-x: hidden;
+    min-width: 320px;
+}
+
+*, *:before, *:after {
+    box-sizing: revert !important;
+}
+
+.body {
+    font-family: "Noto Sans TC", serif;
+    color: #3D3A39;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+    /* 使整個頁面至少填滿視窗 */
+    background-image: url('./img/bg3.png'), url('./img/bg2.svg'), url('./img/bg.png');
+    background-size: auto, cover, auto;
+    background-position: top, center, center;
+    background-repeat: repeat-x, no-repeat, no-repeat;
+    background-attachment: local, fixed, fixed;
+}
+
+.body.sign-up {
+    background-image: url('./img/bg3.png'),url('./img/bg4.svg'),url('./img/bg.png');
+    /* position: relative; *//*於 VUE 開啟*/
+}
+
+.logo {
+    display: flex;
+    width: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*HOUSE ROOF*/
+
+.BG-house-roof {
+    width: 50%;
+    height: 100%;
+    background: #3D3A39;
+    clip-path: polygon(50% 0px, 100% 30px, 100% 50px, 50% 20px, 0% 50px, 0% 30px);
+}
+
+/*HOUSE BODY*/
+
+.BG-house {
+    position: absolute;
+    z-index: 0;
+    margin-top: 145px;
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0, 100% 60px, 100% 100%, 0 100%, 0 60px);
+
+    background-image: url('./img/bg.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.BG-house-left {
+    width: 50%;
+    height: 100%;
+    opacity: 0.75;
+    background: linear-gradient(to bottom, #BE9D73 20%, #FFF 100%);
+}
+
+.BG-house-right {
+    width: 50%;
+    height: 100%;
+    opacity: 0.75;
+    background: linear-gradient(to bottom, #FFF 0%, #BE9D73 58%);
+}
+
+/*-------- 灰色房子 ---------*/
+.gray-left {
+    background: linear-gradient(to bottom, #9FA0A0 20%, #FFF 100%);
+}
+
+.gray-right {
+    background: linear-gradient(to bottom, #FFF 0%, #9FA0A0 58%);
+}
+
+/*HOUSE EYES*/
+
+.circle-left,
+.circle-right {
+  position: absolute;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  background: #3b3b3b; /* 圓形顏色 */
+  border-radius: 50%;
+}
+
+.circle-left {
+  top: 30px;
+  right: 55%;
+}
+
+.circle-right {
+  top: 30px;
+  left: 55%;
+}
+
+
+/*-----------活動公告------------*/
+.notice {
+    background: #3E8191;
+    width: 100%;
+    height: 30px;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 5px 0 0;
+}
+
+
+/*-----------表單內容------------*/
+
+.content {
+    min-height: -webkit-fill-available; /* 適配 iOS 瀏覽器 */
+    min-height: 100vh; /* 防止縮放 */
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    gap: 10px;
+    padding: 0 9vw;
+}
+
+.case-content {
+    padding: 0;
+    /*防止背景偏移*/
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 2rem;
+    letter-spacing: 2px;
+    color: #3D3A39;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 9vw 36px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.88);;
+    border-radius: 30px;
+}
+
+.required {
+    width: 120px;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 3px 10px;
+    color: #FFF;
+    background: #3D3A39;
+    border-radius: 0 0 14px 14px;
+}
+
+.text-section > span, .consent-form-button > span:first-child {
+    color: #AF4732 ;
+    font-weight: 700;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.text-section > img {
+    width: 20px;
+}
+
+label {
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+input {
+    font-family: "Noto Sans TC", serif;
+    outline: none;
+    font-size: 15px;
+    min-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #3D3A39;
+    padding: 2px 0;
+    color: #3D3A39;
+    background: rgba(255, 255, 255, 0);
+    flex-shrink: 0;
+    flex-grow: 1;
+    width: 0%;
+}
+
+input#last-name {
+    max-width: 80px;
+}
+
+input#name {
+    width: 20%;
+    max-width: 220px;
+}
+
+input#address, input#line-id {
+    margin-top: -35px;
+}
+
+input[type="date"] {
+    line-height: normal;    /* 防止文字行高影響 */
+    -webkit-appearance: none; /* 移除 iOS 原生樣式 */
+}
+
+input:focus,select:focus {
+    border-bottom-color: #BE9D73;
+}
+
+/*下拉選單*/
+select {
+    outline: none;
+    font-size: 15px;
+    text-align: center;
+    text-indent: 1px;   /* 解決部分瀏覽器未對齊問題 */
+    appearance: none;   /* 移除原生樣式 */
+    -webkit-appearance: none; /* 移除 WebKit 樣式 (適用於 iOS 和 Chrome) */
+    -moz-appearance: none;    /* 移除 Firefox 樣式 */
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: 1px solid #3D3A39;
+    padding: 2px 0;
+    color: #3D3A39;
+    background: rgba(255, 255, 255, 0);
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+/*傳送手機驗證碼*/
+
+.send-OTP-button {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(to bottom, #FFF 0%, #E8DCCD 100%);
+    color: #3D3A39;
+    border: 1px solid #3D3A39;
+    border-radius: 14px;
+    padding: 6px;
+}
+
+.send-OTP-button:hover {
+    background: linear-gradient(to top, #FFF 0%, #E8DCCD 100%);
+}
+
+
+/*輸入手機驗證碼*/
+
+.OTP-enter {
+    display: flex; /*隱藏 none｜顯示：flex*/
+    flex-direction: row;
+    margin-top: -15px;
+    width: 100%;
+}
+
+input#OTP-number {
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0);
+    color: #3D3A39;
+    border: 1px solid #3D3A39;
+    
+    border-right: none;
+    border-radius: 14px 0 0 14px;
+    padding: 6px;
+    margin: 0;
+}
+
+.OTP-enter > button {
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3E8191;
+    color: #FFF;
+    border: 1px solid #3D3A39;
+    border-radius: 0 14px 14px 0;
+    padding: 6px;
+    margin: 0;
+    width: 60px;
+}
+
+.OTP-enter > button:hover {
+    background: rgb(50, 98, 110);
+}
+
+
+/*驗證倒數計時 & 說明*/
+
+.countdown, .info {
+    display: flex; /*隱藏 none｜顯示：flex*/
+    flex-direction: row;
+}
+
+.countdown > img {
+    width: 26px;
+    margin-right: 10px;
+}
+
+.info > img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.countdown > span {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 26px;
+}
+
+.info > span {
+    font-size: 14px;
+    max-width: 230px;
+}
+
+
+/*個資同意按鈕*/
+
+.consent-form-button {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 5vh;
+    gap: 10px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + label::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #3E8191;
+    border-radius: 20px;
+  }
+
+.consent-form-button > label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border: 1px solid #3D3A39;
+    background: rgba(255, 255, 255, 0);
+}
+
+.consent-form-button > span {
+    font-size: 15px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.view {
+    flex-grow: 1;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    background: linear-gradient(to bottom, #FFF 0%, #E8DCCD 100%);
+    color: #3D3A39;
+    border: 1px solid #3D3A39;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.view:hover {
+    background: linear-gradient(to top, #FFF 0%, #E8DCCD 100%);
+}
+
+
+/*加入會員 & 返回按鈕*/
+
+.next-button {
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    padding: 8px 0;
+    background: #3E8191;
+    color: #FFF;
+    border: 1px solid #3D3A39;
+    border-radius: 16px;
+    white-space: nowrap;
+    letter-spacing: 2px;
+}
+
+.next-button:hover {
+    background: rgb(50, 98, 110)
+}
+
+.previous-button {
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    padding: 8px 0;
+    background: rgba(255, 255, 255, 0);
+    color: #3E8191;
+    border: 1px solid #3E8191;
+    border-radius: 16px;
+    white-space: nowrap;
+    letter-spacing: 2px;
+    margin-bottom: -15px;
+    margin-top: 10px;
+}
+
+.previous-button:hover {
+    background: #ecf7fa;
+}
+
+
+
+/*-------- 個資同意書 ---------*/
+
+.consent-form-content {
+    font-size: 14px;
+    padding-top: 30px;
+}
+
+.consent-form-content > strong {
+    color: #AF4732;
+}
+
+.consent-form-content > p {
+    color: #3E8191;
+    margin: 16px 0;
+}
+
+
+/*-------- 完成頁(成功 & 失敗) ---------*/
+
+.finish {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 06.5vw;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.85);;
+    border-radius: 30px;
+    width: 70vw;
+}
+
+.finish > img {
+    width: 80%;
+    margin: 0;
+}
+
+
+
+/*----- 多選項目 -------*/
+.item-select {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-group, .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid #9FA0A0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+    background: #fcfcfc;
+    box-sizing: border-box !important;
+    width: 70vw;
+    min-width: 260px;
+}
+  
+.checkbox-item, .radio-item {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #3D3A39;
+    position: relative;
+}
+
+.checkbox-item input, .radio-item input {
+    font-size: 14px;
+}
+
+.checkbox-item input[type="checkbox"], .radio-item input[type="radio"] {
+    display: none;
+}
+  
+.custom-checkbox, .custom-radio {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #9FA0A0;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    background: #fcfcfc;
+}
+
+.checkbox-item input[type="checkbox"]:checked + .custom-checkbox {
+    background-image: url('./img/Check.svg');
+}
+
+.radio-item input[type="radio"]:checked + .custom-radio {
+    background: #3E8191;
+}
+
+.radio-item input[type="radio"]:checked + .custom-radio::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: #fcfcfc;
+    border-radius: 50%;
+  }
+
+
+
+/*----- 頁籤多選項目 -------*/
+.tab-checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    background: #fcfcfc;
+    border: 1px solid #9FA0A0;
+    border-radius: 10px;
+    width: 70vw;
+    min-width: 260px;
+    box-sizing: border-box !important;
+}
+
+.tab-content {
+    flex: 1;
+    height: 160px;
+    overflow: auto;
+    padding: 20px;
+}
+
+.region {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tabs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    background-color: #f0f0f0;
+    overflow: auto;
+    border-radius: 10px 0 0 0;
+}
+
+.tabs-radius {
+    border-radius: 10px 0 0 10px;
+}
+
+.tabs button {
+    background: none;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    color: #3D3A39;
+}
+
+.tabs button.active {
+    background: #fcfcfc;
+    color: #3E8191;
+    font-weight: bold;
+}
+
+.reset-button {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    border: none;
+    background: #fcfcfc;
+    border-top: 1px solid #9FA0A0;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+}
+
+.reset-button button {
+    padding: 2px 22px;
+    font-size: 15px;
+    background: linear-gradient(to bottom, #FFF 0%, #b6b6b6 100%);
+    color: #3D3A39;
+    border: 1px solid #3D3A39;
+    border-radius: 16px;
+    white-space: nowrap;
+}
+
+.reset-button button:hover {
+    background: linear-gradient(to top, #FFF 0%, #b6b6b6 100%);
+}
+
+
+
+/*----- 案源管理 -------*/
+
+/*個人資料*/
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #9FA0A0;
+    border-radius: 10px;
+    padding: 15px 0;
+    margin-top: 36px;
+    width: 100%;
+    gap: 25px;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-text label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/*類別篩選器*/
+
+.filter {
+    display: flex;
+    width: 100%;
+}
+
+.filter select {
+    border: 1px solid #9FA0A0;
+    border-radius: 20px;
+    padding: 6px;
+}
+
+.filter::before {
+    content: '〣';
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 16%;
+    line-height: 34px;
+    color: #3E8191;
+    font-size: 20px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+/*表格*/
+.table-border {
+    border: 1px solid #9FA0A0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-section {
+    width: 70vw;
+    font-size: 14px;
+    background-color: #fcfcfc;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table-section thead {
+    background-color: #3E8191;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.table-section th, td {
+    padding: 6px 8px;
+    border-top: 1px solid #9FA0A0;
+    border-right: 1px solid #9FA0A0;
+}
+
+.table-section th:last-child, td:last-child {
+    border-right: none;
+}
+
+.table-section td:first-child, td:last-child {
+    white-space: nowrap;
+}
+
+.table-section tbody tr:nth-child(even) {
+    background-color: #ecf7fa;
+}
+
+/*展開表格按鈕*/
+.more-button {
+    width: 30px;
+    margin-top: -15px;
+}

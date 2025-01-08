@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 14.5 14.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名漸層_2);
+        stroke: #3d3a39;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        fill: #3d3a39;
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="_未命名漸層_2" data-name="未命名漸層 2" x1="-16.28" y1="8.85" x2="12.79" y2="6.87" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#be9d73"/>
+      <stop offset=".15" stop-color="#c0a077"/>
+      <stop offset=".32" stop-color="#c6aa86"/>
+      <stop offset=".51" stop-color="#d1ba9d"/>
+      <stop offset=".7" stop-color="#e0d1be"/>
+      <stop offset=".9" stop-color="#f4eee7"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="icon">
+    <g>
+      <circle class="cls-1" cx="7.25" cy="7.25" r="7"/>
+      <path class="cls-2" d="M6.39,3.32h1.72v1.53h-1.72v-1.53ZM6.39,5.87h1.72v6.21h-1.72v-6.21Z"/>
+    </g>
+  </g>
+</svg>

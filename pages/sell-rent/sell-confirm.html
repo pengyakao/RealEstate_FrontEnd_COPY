@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城嶼服務</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="shortcut icon" href="../img/star-favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+<body class="body">
+    <div class="notice">專業代租管｜居家生活服務｜不動產買賣</div>
+    <div class="logo"><img src="/img/logo.svg"/></div>
+    <div class="BG-house-roof"></div>
+    <div class="BG-house">
+        <div class="BG-house-left gray-left"></div>
+        <div class="BG-house-right gray-right"></div>
+    </div>
+    <div class="content">
+        <h1>我是房東<br>
+          房屋出售諮詢單</h1>
+        <div class="form">
+            <div class="required">＊為必填項目</div>
+
+            
+            <div class="info">
+              <img src="/img/info.svg"/>
+              <span>請確認您所填寫的資料</span>
+            </div>
+
+            <div class="item-select">
+                <div  class="text-section">
+                    <span>＊</span>
+                    <label>需求</label>
+                </div>
+                
+                <div class="radio-group">
+                  <label class="radio-item">
+                    <input type="radio" name="service" value="房屋出售">
+                    <span class="custom-radio"></span> 房屋出售
+                  </label>
+                </div>
+            </div>
+
+            <div class="text-section">
+              <span>＊</span>
+              <label for="listings-city">房源所在縣市</label>
+              <select id="listings-city">
+                  <option value="" disabled selected>臺灣縣市</option>
+                  <option value="基隆市">基隆市</option>
+                  <option value="新北市">新北市</option>
+                  <option value="臺北市">臺北市</option>
+              </select>
+          </div>
+
+          <div class="text-section">
+              <span>＊</span>
+              <label for="listings-area">房源地址（含樓層）</label>
+              <select id="listings-area">
+                  <option value="" disabled selected>區域</option>
+                  <option value="仁愛區">仁愛區</option>
+                  <option value="信義區">信義區</option>
+                  <option value="中正區">中正區</option>
+              </select>
+          </div>
+
+          <div class="text-section">
+              <span>　</span>
+              <input type="text" id="address" placeholder="地址">
+          </div>
+
+          <div class="text-section">
+              <span>　</span>
+              <label for="community">房源社區名稱</label>
+              <input type="text" id="community">
+          </div>
+
+          <div class="text-section">
+            <span>　</span>
+            <label for="house-no">戶號</label>
+            <input type="text" id="house-no" placeholder="如：2FA4">
+          </div>
+
+            <div class="item-select">
+                <div  class="text-section">
+                    <span>＊</span>
+                    <label>格局</label>
+                </div>
+                
+                <div class="radio-group">
+                    <label class="radio-item">
+                      <input type="radio" name="layout" value="2房1衛">
+                      <span class="custom-radio"></span> 2房1衛
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="layout" value="2房2衛">
+                      <span class="custom-radio"></span> 2房2衛
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="layout" value="3房2衛">
+                      <span class="custom-radio"></span> 3房2衛
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="layout" value="4房2衛">
+                      <span class="custom-radio"></span> 4房2衛
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="layout" value="其他">
+                      <span class="custom-radio"></span> 其他：
+                      <input type="text" ></input>
+                    </label>
+                </div>
+              </div>
+
+              <div class="text-section">
+                <span>＊</span>
+                <label for="wanted-price">欲售金額</label>
+                <input type="text" id="wanted-price">
+                <label>萬</label>
+              </div>
+
+                <div class="text-section">
+                    <span>＊</span>
+                    <label for="call-time">方便聯繫時間</label>
+                    <select id="call-time">
+                        <option value="上午（9~12）">上午（9~12）</option>
+                        <option value="中午（12~14）">中午（12~14）</option>
+                        <option value="下午（14~18）">下午（14~18）</option>
+                    </select>
+                </div>
+
+            <div class="text-section">
+                <span>　</span>
+                <label for="community">特殊備註</label>
+                <input type="text" id="community">
+            </div>
+
+            <button class="previous-button">返回編輯</button>
+            <button class="next-button">確認送出</button>
+        </div>
+    </div>
+</body>
+</html>

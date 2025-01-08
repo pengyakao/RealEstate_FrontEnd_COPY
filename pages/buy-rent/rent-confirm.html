@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城嶼服務</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/script.js"></script>
+    <link rel="shortcut icon" href="../img/star-favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+<body class="body">
+    <div class="notice">專業代租管｜居家生活服務｜不動產買賣</div>
+    <div class="logo"><img src="/img/logo.svg"/></div>
+    <div class="BG-house-roof"></div>
+    <div class="BG-house">
+        <div class="BG-house-left gray-left"></div>
+        <div class="BG-house-right gray-right"></div>
+    </div>
+    <div class="content">
+        <h1>我要租屋<br>
+          租屋諮詢單</h1>
+        <div class="form">
+            <div class="required">＊為必填項目</div>
+
+            
+            <div class="info">
+              <img src="/img/info.svg"/>
+              <span>請確認您所填寫的資料</span>
+            </div>
+
+            <div class="item-select">
+                <div  class="text-section">
+                    <span>＊</span>
+                    <label>需求</label>
+                </div>
+                
+                <div class="radio-group">
+                  <label class="radio-item">
+                    <input type="radio" name="service" value="自住租屋">
+                    <span class="custom-radio"></span> 自住租屋
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="service" value="商業租屋">
+                    <span class="custom-radio"></span> 商業租屋
+                  </label>
+                </div>
+            </div>
+
+            <div class="item-select">
+                <div  class="text-section">
+                    <span>＊</span>
+                    <label>請選擇欲租屋縣市 / 區域（可複選）</label>
+                </div>
+                <!------區域頁籤多選------>
+                <div class="tab-checkbox-group">
+                    <div class="tabs tabs-radius">
+                        <button class="active" onclick="showContent('taichung')">台中市</button>
+                        <button onclick="showContent('keelung')">基隆市</button>
+                    </div>
+                    <div class="tab-content" id="taichung">
+                        <div class="region">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="region" value="不限" checked disabled>
+                                <span class="custom-checkbox"></span> 不限
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="keelung" style="display: none;">
+                        <div class="region">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="region" value="仁愛區" checked disabled>
+                                <span class="custom-checkbox"></span> 仁愛區
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-select">
+                <div  class="text-section">
+                    <span>＊</span>
+                    <label>希望坪數 / 理想格局（可複選）</label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="layout" value="8坪以下套房">
+                      <span class="custom-checkbox"></span> 8坪以下套房
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="layout" value="8~15坪大套房（1+1）">
+                      <span class="custom-checkbox"></span> 8~15坪大套房（1+1）
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="layout" value="2房1衛">
+                      <span class="custom-checkbox"></span> 2房1衛
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="layout" value="2房2衛">
+                      <span class="custom-checkbox"></span> 2房2衛
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="layout" value="3房2衛">
+                      <span class="custom-checkbox"></span> 3房2衛
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="layout" value="4房2衛">
+                      <span class="custom-checkbox"></span> 4房2衛
+                    </label><br>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="layout" value="店面">
+                      <span class="custom-checkbox"></span> 店面 　
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="layout" value="透天">
+                      <span class="custom-checkbox"></span> 透天
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="layout">
+                      <span class="custom-checkbox"></span> 其他：
+                      <input type="text"></input>
+                    </label>
+                  </div>
+            </div>
+
+            <div class="text-section">
+                  <span>＊</span>
+                  <label for="pre-order-price">租屋預算</label>
+                  <input type="text" id="pre-order-price">
+                  <label>/月</label>
+            </div>
+
+            <div class="text-section">
+                <span>＊</span>
+                <label for="call-time">方便聯繫時間</label>
+                <select id="call-time">
+                    <option value="上午（9~12）">上午（9~12）</option>
+                    <option value="中午（12~14）">中午（12~14）</option>
+                    <option value="下午（14~18）">下午（14~18）</option>
+                </select>
+            </div>
+
+            <div class="text-section">
+                <span>　</span>
+                <label for="community">特殊備註</label>
+                <input type="text" id="community">
+            </div>
+
+            <button class="previous-button">返回編輯</button>
+            <button class="next-button">確認送出</button>
+        </div>
+    </div>
+
+</body>
+</html>

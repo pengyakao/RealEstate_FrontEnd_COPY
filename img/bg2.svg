@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 390 668.09">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        opacity: .75;
+      }
+
+      .cls-3 {
+        fill: #9fa0a0;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="390" height="668.09"/>
+    </clipPath>
+  </defs>
+  <g id="_說明" data-name="說明">
+    <g class="cls-5">
+      <g>
+        <g class="cls-4">
+          <polygon class="cls-3" points="195 687.89 390.94 687.89 389.23 -386.83 195 -484.37 195 687.89"/>
+        </g>
+        <g class="cls-4">
+          <polygon class="cls-2" points="195 671.03 -.94 671.03 .77 -386.18 195 -485.73 195 671.03"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

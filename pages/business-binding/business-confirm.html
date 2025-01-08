@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>靠行業務申請單</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="shortcut icon" href="../img/star-favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+<body class="body">
+    <div class="notice">靠行業務申請單</div>
+    <div class="logo"><img src="/img/logo.svg"/></div>
+    <div class="BG-house-roof"></div>
+    <div class="BG-house">
+        <div class="BG-house-left gray-left"></div>
+        <div class="BG-house-right gray-right"></div>
+    </div>
+    <div class="content">
+        <h1>靠行業務資料填寫</h1>
+        <div class="form">
+            <div class="required">＊為必填項目</div>
+
+            <div class="info">
+                <img src="/img/info.svg"/>
+                <span>資料送出後，依管理權限審核狀態為主，若有相關問題，請來電洽詢：<br>
+                    04-2233-4422</span>
+              </div>
+
+            <div class="text-section">
+                <span>＊</span>
+                <label for="last-name">姓</label>
+                <input type="text" id="last-name">
+                <label for="name">名</label>
+                <input type="text" id="name">
+            </div>
+
+            <div class="text-section">
+                <span>＊</span>
+                <label for="gender">性別</label>
+                <select id="gender">
+                    <option value="生理男性">生理男性</option>
+                    <option value="生理女性">生理女性</option>
+                    <option value="不透漏">不透漏</option>
+                </select>
+            </div>
+
+            <div class="text-section">
+                <span>＊</span>
+                <label for="birthday">生日</label>
+                <input type="date" id="birthday">
+            </div>
+
+            <div class="text-section">
+                <span>＊</span>
+                <label for="address-city">戶籍地址</label>
+                <select id="address-city">
+                    <option value="" disabled selected>縣市</option>
+                    <option value="基隆市">基隆市</option>
+                    <option value="新北市">新北市</option>
+                    <option value="臺北市">臺北市</option>
+                </select>
+            </div>
+
+            <div class="text-section">
+                <span>　</span>
+                <input type="text" id="address" placeholder="地址">
+            </div>
+
+            <div class="text-section">
+                <span>＊</span>
+                <label for="branch">分店</label>
+                <select id="branch">
+                    <option value="台北店">台北店</option>
+                    <option value="基隆店">基隆店</option>
+                    <option value="台中店">台中店</option>
+                </select>
+            </div>
+
+            <div class="text-section">
+                <span>＊</span>
+                <label for="line">LINE ID</label>
+                <label class="checkbox-item">
+                    <input type="checkbox" name="same-phone-number" value="同手機號碼">
+                    <span class="custom-checkbox"></span>
+                    同手機號碼</label>
+            </div>
+
+            <div class="text-section">
+                <span>　</span>
+                <input type="text" id="line-id" placeholder="LINE ID">
+            </div>
+
+            <div class="text-section">
+                <span>＊</span>
+                <label for="phone">手機</label>
+                <input type="text" id="phone">
+                <img src="/img/check.svg"/>
+            </div>
+
+            <div class="consent-form-button">
+                <span>＊</span>
+                <input type="checkbox" id="consent">
+                <label for="consent"></label>
+                <span>同意個人資料蒐集</span>
+                <button class="view">查看內容</button>
+            </div>
+
+            <button class="previous-button">返回資料修改</button>
+            <button class="next-button">確認送出</button>
+        </div>
+    </div>
+</body>
+</html>
